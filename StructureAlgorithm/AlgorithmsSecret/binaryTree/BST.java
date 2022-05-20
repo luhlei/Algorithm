@@ -3,7 +3,7 @@ package AlgorithmsSecret.binaryTree;
 /**
  * 二叉搜索树最重要的一点是：一定要明确节点要干嘛，前序遍历是自顶向下，后序遍历是自底向上，后序遍历一般是需要依赖子节点的数据
  */
-public class BST {//前序遍历
+public class BST {//前序遍历，有重复计算，时间复杂度很高
     int maxSum=0;
     public int MaxSumBST(TreeNode root){
         travers(root);
@@ -59,7 +59,7 @@ public class BST {//前序遍历
 }
 
 
-class BST2{//后序遍历
+class BST2{//后序遍历，比前序遍历快很多，没有重复计算
     int maxSum=0;
     public int MaxSumBST(TreeNode root){
         traverse(root);
