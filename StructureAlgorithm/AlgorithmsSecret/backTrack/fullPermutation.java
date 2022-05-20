@@ -39,6 +39,6 @@ public class fullPermutation {
     }
 
     public static void main(String[] args) {
-
+        System.sout.printlen("GitHub");
     }
 }
