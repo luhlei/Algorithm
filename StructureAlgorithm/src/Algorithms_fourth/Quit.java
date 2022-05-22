@@ -45,7 +45,7 @@ public class Quit {
     }
 
     public static void main(String[] args) {
-        int[] nums=new int[]{3,8,54,2,4,56,8};
+        int[] nums=new int[]{3,8,54,2,4,56,8,90};
         sort(nums);
         System.out.println(Arrays.toString(nums));
     }
