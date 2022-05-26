@@ -111,7 +111,7 @@ class Singleton3{
  */
 class Singleton4{
     private static class instance{
-        private static Singleton4 Instance=new Singleton4();
+        static Singleton4 Instance=new Singleton4();
     }
     public static Singleton4 getInstance(){
         return instance.Instance;
@@ -124,6 +124,4 @@ class Singleton4{
  */
 enum Singleton5{
     instance;
-    public void method(){
-    }
 }
