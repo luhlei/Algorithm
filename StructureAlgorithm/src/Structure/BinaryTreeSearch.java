@@ -6,7 +6,7 @@ package Structure;
  */
 
 public class BinaryTreeSearch <AnyType extends Comparable<? super AnyType>>{   //对参数类型进行了限制
-    private class BinaryNode<AnyType> {
+    private static class BinaryNode<AnyType> {
         BinaryNode<AnyType> left;
         AnyType element;
         BinaryNode<AnyType> right;
