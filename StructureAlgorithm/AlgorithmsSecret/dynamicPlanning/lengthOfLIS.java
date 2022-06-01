@@ -23,4 +23,18 @@ public class lengthOfLIS {
         int[] nums=new int[]{10,9,2,5,3,7,101,18};
         System.out.println(length(nums));
     }
+    public int maxSubArray(int[] nums){
+        int n=nums.length;
+        if (n==0) return 0;
+        int[] dp=new int[n];
+        dp[0]=nums[0];
+        for (int i = 1; i < n; i++) {
+            dp[i]=Math.max(nums[i],dp[i-1]+nums[i]);//最关键的一步，状态转移方程
+        }
+        int res=Integer.MIN_VALUE;
+        for (int i = 0; i < n; i++) {
+            res=Math.max(res,dp[i]);
+        }
+        return res;
+    }
 }
