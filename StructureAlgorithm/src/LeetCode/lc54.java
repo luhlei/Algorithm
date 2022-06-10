@@ -16,4 +16,13 @@ public class lc54 {
         if (cont==k) value=root.val;
         traverse(root.left,k);
     }
+    //lc55
+    public int maxDepth(TreeNode root) {
+        if(root==null){
+            return 0;
+        }
+        int leftLength=maxDepth(root.left);
+        int rightLength=maxDepth(root.right);
+        return leftLength>rightLength?leftLength+1:rightLength+1;
+    }
 }
