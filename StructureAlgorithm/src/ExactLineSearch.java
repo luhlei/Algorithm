@@ -4,7 +4,7 @@ public class ExactLineSearch {
     需要计算的方程，如果要计算不同的方程，修改这部分即可！
      */
     public static double function(double x){
-        return Math.pow(x,3)-2*x+1;
+        return Math.pow(x,2)-6*x+2;
     }
     /**
      * 精确线搜索，黄金分割法
@@ -66,6 +66,6 @@ public class ExactLineSearch {
     */
     public static void main(String[] args) {
         double c =0.15;
-        search(0,3,c);
+        search(2,4,c);
     }
 }

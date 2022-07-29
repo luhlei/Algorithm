@@ -1,6 +1,5 @@
 package AlgorithmsSecret.binaryTree;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -120,7 +119,7 @@ public class buildTree {
  */
 class Merge{
     private static int[] temp;//节省开销
-    public static void sort(@NotNull int[] nums){
+    public static void sort(int[] nums){
         temp=new int[nums.length];
     }
     public static void sort(int[] nums,int lo,int hi){
