@@ -1,4 +1,4 @@
-package AlgorithmsSecret;
+package AlgorithmsSecret.binarySearch;
 
 import org.junit.Test;
 
@@ -24,15 +24,21 @@ public class binarySearch {
     右边界的二分查找
      */
     public static int rightBound(int[] nums,int target){
-        int left=0,right=nums.length-1;
-        while (left<=right){
+        int left=0,right=nums.length;
+        while(left<=right){
             int mid=left+(right-left)/2;
-            int cmp=Integer.compare(nums[mid],target);
-            if (cmp==0) left=mid+1;//收缩左侧边界，而且因为数组是有序的，如果没有target，那么意味着nums剩下的元素都比target大，然后right=mid-1一直循环，直到不符合left<right;
-            else if (cmp>0) right=mid-1;
-            else left=mid+1;
+            int cmd = Integer.compare(nums[mid], target);
+            if (cmd<0){
+                left=mid+1;
+            }else if (cmd==0){
+                left=mid+1;
+            }else {
+                right=mid-1;
+            }
         }
-        if (right<0||nums[right]!=target) return -1;
+        if (right<0||nums[right]!=target){
+            return -1;
+        }
         return right;
     }
 

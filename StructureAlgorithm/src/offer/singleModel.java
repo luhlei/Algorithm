@@ -107,7 +107,7 @@ class Singleton3{
     private Singleton3() { }
 }
 /**
- * 5、线程安全的懒汉式：静态内部类（推荐）
+ * 5、线程安全的懒汉式：静态内部类（推荐）,静态内部类和内部类，都是在被调用时才会加载，不是随着外部类的加载和加载的，其实和静态方法类似
  */
 class Singleton4{
     private static class instance{
