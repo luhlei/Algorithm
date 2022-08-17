@@ -9,11 +9,11 @@ public class solveNQueens {
     public static ArrayList<ArrayList<String>> solveNQueens(int n){
         ArrayList<String> board=new ArrayList<>(n);
         char[] chars=new char[n];
-        for (char c : chars) {
-            c='.';
+        for (int i = 0; i < n; i++) {
+            chars[i]='.';
         }
-        for (String s : board) {
-            s=new String(chars);
+        for (int i = 0; i < n; i++) {
+            board.add(new String(chars));
         }
         backTrack(board,0);
         return res;
@@ -47,7 +47,7 @@ public class solveNQueens {
         for (int i=row-1,j=col+1;i>0&&j<board.get(row).length();i--,j++){
             if (board.get(i).charAt(j)=='Q') return false;
         }
-        for (int i=row-1,j=col-1;i>0&&j>0;i--,j++){
+        for (int i=row-1,j=col-1;i>=0&&j>=0;i--,j--){
             if (board.get(i).charAt(j)=='Q') return false;
         }
         return true;
