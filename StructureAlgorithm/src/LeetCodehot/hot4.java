@@ -36,7 +36,8 @@ public class hot4 {
         }
     }
     /*
-
+    时间复杂度为：O(log(m+n)
+    空间复杂度为：O(1)
      */
     public double findMedianSortedArrays2(int[] nums1, int[] nums2){
         int m=nums1.length,n=nums2.length;

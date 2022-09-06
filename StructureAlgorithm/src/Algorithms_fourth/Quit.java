@@ -1,5 +1,7 @@
 package Algorithms_fourth;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -48,5 +50,13 @@ public class Quit {
         int[] nums=new int[]{3,8,54,2,4,56,8,90};
         sort(nums);
         System.out.println(Arrays.toString(nums));
+    }
+    @Test
+    public void test(){
+        int[] nums=new int[]{1,2,3,4,5};
+        System.out.println(partition(nums, 0, 4));
+        for (int num : nums) {
+            System.out.println(num);
+        }
     }
 }
