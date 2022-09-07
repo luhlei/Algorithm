@@ -5,6 +5,9 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Z 字形变换
+ */
 public class hot6 {
     public String convert(String s, int numRows) {
         if (numRows<2) return s;
