@@ -10,7 +10,7 @@ public class 剑指Offer38字符串的排列 {
         boolean[] visited=new boolean[s.length()];
         StringBuffer sb=new StringBuffer();
         help(chars,sb,visited);
-        return res.toArray(String[]::new);
+        return (String[]) res.toArray();
     }
     public void help(char[] chars,StringBuffer sb,boolean[] visited){
         if (sb.length()==chars.length){
